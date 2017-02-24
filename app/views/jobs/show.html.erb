@@ -4,14 +4,14 @@
 
 <% if @job.pending %>
   <% if current_worker && @job.worker_id == current_worker.id %>
-    <p>Mark as currently doing</p>
-    <p>Mark as done</p>
+    <%= link_to "Mark as in progress", job_path(@job, :job => { in_work: true }), :method => "patch", remote: true  %>
+    <%= link_to "Mark as done", job_path(@job, :job => {completed: true, in_work: false}), :method => "patch", remote: true  %>
   <% else %>
   <p>Someone has already claimed this job; it's currently pending.</p>
   <% end %>
 <% else %>
 <div id='claim-job'>
   <p>No one has claimed this job!</p>
-  <%= link_to "click here to claim it now", job_path(@job), :method => "patch", remote: true %>
+  <%= link_to "click here to claim it now", job_path(@job, :job => { worker_id: current_worker.id, pending: true}, col: 0), :method => "patch", remote: true  %>
 </div>
 <% end %>

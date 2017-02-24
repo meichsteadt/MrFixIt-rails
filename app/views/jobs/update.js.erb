@@ -1,4 +1,11 @@
 $(function() {
-  $('#claim-job').hide().after("You've successfully claimed this job");
-  console.log('hi');
+  console.log('working');
+  $('#claim-job').hide().after("You've successfully claimed this job" + "<a href='/workers/<%= current_worker.id %>'>View your jobs</a>");
+    if (<%= params[:col] %> == 2) {
+      $('#col<%= params[:col].to_i + 1 %>').append('<li id="job<%= @job.id %>"><a href="jobs/<%= @job.id %>"><%= @job.title %></a></li>')
+    }
+    else {
+      $('#col<%= params[:col].to_i + 1 %>').append('<li id="job<%= @job.id %>"><a href="jobs/<%= @job.id %>"><%= @job.title %></a><a data-remote="true" rel="nofollow" data-method="patch" href="/jobs/<%= @job.id %>?col=2&amp;job%5Bcompleted%5D=true&job%5Bin_work%5D=false">&gt;</a></li>')
+    }
+    $('#job<%= @job.id %>').remove();
 })
