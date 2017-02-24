@@ -25,7 +25,7 @@ class JobsController < ApplicationController
   def update
     @job = Job.find(params[:id])
     if current_worker
-      if @job.update(pending: true, worker_id: current_worker.id)
+      if @job.update(job_params)
           respond_to do |format|
           format.html { redirect_to jobs_path() }
           format.js
@@ -37,14 +37,14 @@ class JobsController < ApplicationController
     else
       # We need to streamline this process better in the future! - Mr. Fix-It.
       flash[:notice] = 'You must have a worker account to claim a job. Register for one using the link in the navbar above.'
-      redirect_to job_path(@job)
+      redirect_to new_user_registration
     end
   end
 
 private
 
   def job_params
-    params.require(:job).permit(:title, :description)
+    params.require(:job).permit(:title, :description, :in_work, :completed, :worker_id)
   end
 
 end

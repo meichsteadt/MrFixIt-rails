@@ -3,7 +3,12 @@
 <h3><%= @job.description %></h3>
 
 <% if @job.pending %>
+  <% if current_worker && @job.worker_id == current_worker.id %>
+    <p>Mark as currently doing</p>
+    <p>Mark as done</p>
+  <% else %>
   <p>Someone has already claimed this job; it's currently pending.</p>
+  <% end %>
 <% else %>
 <div id='claim-job'>
   <p>No one has claimed this job!</p>

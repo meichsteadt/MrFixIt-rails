@@ -7,37 +7,62 @@
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
   <body>
-    <div class="header">
-      <h1 class="page-title">Mr. Fix-It</h1>
-      <h2>Crowd-sourced repairs!</h2>
-    </div>
-    <div class="navigation-menu">
-      <ul>
-        <li><%= link_to "Home", root_path %></li>
-        <li><%= link_to "See All Jobs", jobs_path %></li>
-        <li><%= link_to "Add Your Job", new_job_path %></li>
-        <% if worker_signed_in? %>
-          <p class="login-notice"><em>You're signed into your <%= current_worker.email %> <b>worker account</b></em></p>
-          <li><%= link_to "Worker Dashboard", worker_path(current_worker) %></li>
-          <li><%= link_to "Log Out", destroy_user_session_path, :method => :delete %></li>
-        <% elsif user_signed_in? %>
-          <p class="login-notice"><em>You're signed in as <%= current_user.email %></em></p>
-          <li><%= link_to "Log Out", destroy_user_session_path, :method => :delete %></li>
-          <li><%= link_to "Register as a Worker", new_worker_path %></li>
-        <% else %>
-        <li><%= link_to "Register as a Worker", new_worker_path %></li>
-        <li><%= link_to "Register to Post Jobs", new_user_registration_path %></li>
-        <li><%= link_to "Log In as User", new_user_session_path %></li>
-        <li><%= link_to "Log In as Worker", new_worker_session_path %></li>
-        <% end %>
-      </ul>
-    </div>
-    <div class="content">
-    <div class="flash-messages">
+    <nav class="navbar navbar-default">
+      <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <%= link_to "Mr. Fix-It", root_path, class: 'navbar-brand' %>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+          <ul class="nav navbar-nav navbar-right">
+            <li><%= link_to "See All Jobs", jobs_path %></li>
+            <% if worker_signed_in? %>
+              <li><%= link_to "Worker Dashboard", worker_path(current_worker) %></li>
+              <li><%= link_to "Log Out", destroy_user_session_path, :method => :delete %></li>
+              <li><%= link_to "Add Your Job", new_job_path %></li>
+            <% elsif user_signed_in? %>
+              <li><%= link_to "Log Out", destroy_user_session_path, :method => :delete %></li>
+              <li><%= link_to "Register as a Worker", new_worker_path %></li>
+              <li><%= link_to "Add Your Job", new_job_path %></li>
+            <% else %>
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Sign-up <span class="caret"></span></a>
+              <ul class="dropdown-menu">
+                <li><%= link_to "Sign-up as a Worker", new_worker_path %></li>
+                <li><%= link_to "Sign-up to Post Jobs", new_user_registration_path %></li>
+              </ul>
+            </li>
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Sign-in <span class="caret"></span></a>
+              <ul class="dropdown-menu">
+                <li><%= link_to "Sign-in as User", new_user_session_path %></li>
+                <li><%= link_to "Sign-in as Worker", new_worker_session_path %></li>
+              </ul>
+            </li>
+            <% end %>
+          </ul>
+        </div><!-- /.navbar-collapse -->
+      </div><!-- /.container-fluid -->
+    </nav>
       <%= flash[:alert] %>
-      <h3><%= flash[:notice] %></h3>
-      </div>
-      <%= yield %>
-    </div>
+      <%= flash[:notice] %>
+      <% if current_page?('/') %>
+        <%= yield %>
+      <% else %>
+        <div class="container">
+          <%= yield %>
+        </div>
+      <% end %>
+      <footer>
+        <p>&copy; Mr. Fix-It 2017</p>
+      </footer>
   </body>
 </html>
