@@ -1,9 +1,17 @@
 {
   "RSpec": {
     "coverage": {
-      "/Users/gassinbreh/GitHub/rails/MrFixIt-rails/spec/features/landing_pages_spec.rb": [
+      "/Users/gassinbreh/GitHub/rails/MrFixIt-rails/spec/features/job_pages_spec.rb": [
         1,
         null,
+        1,
+        1,
+        1,
+        1,
+        null,
+        1,
+        1,
+        1,
         1,
         1,
         1,
@@ -54,8 +62,8 @@
         null,
         null,
         1,
-        7,
-        7,
+        9,
+        9,
         null,
         null,
         null,
@@ -600,7 +608,7 @@
         null,
         1,
         1,
-        2,
+        3,
         0,
         0,
         null,
@@ -629,7 +637,7 @@
         1,
         null,
         1,
-        0,
+        1,
         null,
         null,
         1,
@@ -638,7 +646,7 @@
         null,
         null,
         1,
-        0,
+        1,
         null,
         null,
         1,
@@ -651,12 +659,12 @@
         null,
         null,
         1,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
         null,
         null,
         0,
@@ -673,7 +681,7 @@
         1,
         null,
         1,
-        0,
+        1,
         null,
         null,
         null
@@ -738,6 +746,16 @@
         null,
         null
       ],
+      "/Users/gassinbreh/GitHub/rails/MrFixIt-rails/spec/features/landing_pages_spec.rb": [
+        1,
+        null,
+        1,
+        1,
+        1,
+        1,
+        null,
+        null
+      ],
       "/Users/gassinbreh/GitHub/rails/MrFixIt-rails/spec/features/user_pages_spec.rb": [
         1,
         null,
@@ -795,6 +813,6 @@
         null
       ]
     },
-    "timestamp": 1487979326
+    "timestamp": 1487980089
   }
 }
