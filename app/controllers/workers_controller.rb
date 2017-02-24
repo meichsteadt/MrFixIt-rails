@@ -1,5 +1,5 @@
 class WorkersController < ApplicationController
-  before_action :authenticate_user!
+  before_action :authenticate_worker
   def show
     @worker = current_worker
     render :show

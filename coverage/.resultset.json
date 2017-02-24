@@ -85,7 +85,9 @@
         1,
         1,
         null,
-        null
+        null,
+        null,
+        1
       ],
       "/Users/gassinbreh/GitHub/rails/MrFixIt-rails/config/environment.rb": [
         null,
@@ -595,6 +597,14 @@
       "/Users/gassinbreh/GitHub/rails/MrFixIt-rails/app/controllers/application_controller.rb": [
         1,
         1,
+        null,
+        1,
+        1,
+        1,
+        0,
+        0,
+        null,
+        null,
         null
       ],
       "/Users/gassinbreh/GitHub/rails/MrFixIt-rails/app/helpers/application_helper.rb": [
@@ -615,6 +625,8 @@
       ],
       "/Users/gassinbreh/GitHub/rails/MrFixIt-rails/app/controllers/jobs_controller.rb": [
         1,
+        1,
+        1,
         null,
         1,
         0,
@@ -654,6 +666,7 @@
         null,
         0,
         0,
+        null,
         null,
         null,
         null,
@@ -668,28 +681,29 @@
       "/Users/gassinbreh/GitHub/rails/MrFixIt-rails/app/controllers/landing_controller.rb": [
         1,
         1,
-        4,
+        3,
         null,
         null
       ],
       "/Users/gassinbreh/GitHub/rails/MrFixIt-rails/app/controllers/workers_controller.rb": [
         1,
         1,
-        0,
-        0,
+        1,
+        1,
+        1,
         null,
         null,
         1,
         null,
-        1,
         0,
         0,
-        1,
-        null,
         0,
         0,
         null,
-        1,
+        0,
+        0,
+        null,
+        0,
         null,
         null,
         null,
@@ -708,6 +722,19 @@
       "/Users/gassinbreh/GitHub/rails/MrFixIt-rails/app/models/job.rb": [
         1,
         1,
+        null
+      ],
+      "/Users/gassinbreh/GitHub/rails/MrFixIt-rails/spec/factories.rb": [
+        1,
+        1,
+        1,
+        1,
+        null,
+        null,
+        1,
+        1,
+        1,
+        null,
         null
       ],
       "/Users/gassinbreh/GitHub/rails/MrFixIt-rails/spec/features/user_pages_spec.rb": [
@@ -732,6 +759,8 @@
         1,
         1,
         1,
+        1,
+        1,
         null,
         null
       ],
@@ -750,6 +779,6 @@
         null
       ]
     },
-    "timestamp": 1487976711
+    "timestamp": 1487978241
   }
 }

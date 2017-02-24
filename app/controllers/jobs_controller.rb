@@ -1,4 +1,6 @@
 class JobsController < ApplicationController
+  before_action :authenticate_worker
+  skip_before_action :authenticate_worker, only: [:show, :index]
 
   def index
     @jobs = Job.all
@@ -37,9 +39,10 @@ class JobsController < ApplicationController
     else
       # We need to streamline this process better in the future! - Mr. Fix-It.
       flash[:notice] = 'You must have a worker account to claim a job. Register for one using the link in the navbar above.'
-      redirect_to new_user_registration
+      redirect_to new_user_registration_path
     end
   end
+
 
 private
 
