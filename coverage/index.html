@@ -14,27 +14,27 @@
       <img src="./assets/0.10.0/loading.gif" alt="loading"/>
     </div>
     <div id="wrapper" style="display:none;">
-      <div class="timestamp">Generated <abbr class="timeago" title="2017-02-24T15:48:09-08:00">2017-02-24T15:48:09-08:00</abbr></div>
+      <div class="timestamp">Generated <abbr class="timeago" title="2017-02-24T15:52:05-08:00">2017-02-24T15:52:05-08:00</abbr></div>
       <ul class="group_tabs"></ul>
 
       <div id="content">
         <div class="file_list_container" id="AllFiles">
   <h2>
     <span class="group_name">All Files</span>
-    (<span class="covered_percent"><span class="green">93.4%</span></span>
+    (<span class="covered_percent"><span class="green">95.91%</span></span>
      covered at
      <span class="covered_strength">
        <span class="green">
-         1.07
+         1.11
        </span>
     </span> hits/line)
   </h2>
   <a name="AllFiles"></a>
   <div>
     <b>37</b> files in total.
-    <b>212</b> relevant lines. 
-    <span class="green"><b>198</b> lines covered</span> and
-    <span class="red"><b>14</b> lines missed </span>
+    <b>220</b> relevant lines. 
+    <span class="green"><b>211</b> lines covered</span> and
+    <span class="red"><b>9</b> lines missed </span>
   </div>
   <table class="file_list">
     <thead>
@@ -77,17 +77,17 @@
         <td>7</td>
         <td>5</td>
         <td>2</td>
-        <td>1.0</td>
+        <td>1.3</td>
       </tr>
       
       <tr>
         <td class="strong"><a href="#72c12bb35b057a3954e482a5b6cfea235943ce0b" class="src_link" title="app/controllers/jobs_controller.rb">app/controllers/jobs_controller.rb</a></td>
-        <td class="red strong">65.52 %</td>
+        <td class="yellow strong">82.76 %</td>
         <td>53</td>
         <td>29</td>
-        <td>19</td>
-        <td>10</td>
-        <td>0.7</td>
+        <td>24</td>
+        <td>5</td>
+        <td>0.9</td>
       </tr>
       
       <tr>
@@ -353,9 +353,9 @@
       <tr>
         <td class="strong"><a href="#e4cbd183d6779c4d7d2183276571045c61d47633" class="src_link" title="spec/features/job_pages_spec.rb">spec/features/job_pages_spec.rb</a></td>
         <td class="green strong">100.0 %</td>
-        <td>16</td>
-        <td>12</td>
-        <td>12</td>
+        <td>25</td>
+        <td>20</td>
+        <td>20</td>
         <td>0</td>
         <td>1.0</td>
       </tr>
@@ -417,7 +417,7 @@
         <td>22</td>
         <td>22</td>
         <td>0</td>
-        <td>1.7</td>
+        <td>1.8</td>
       </tr>
       
     </tbody>
@@ -564,8 +564,8 @@
           <code class="ruby">  def authenticate_worker</code>
         </li>
       
-        <li class="covered" data-hits="3" data-linenumber="6">
-          <span class="hits">3</span>
+        <li class="covered" data-hits="5" data-linenumber="6">
+          <span class="hits">5</span>
           
           <code class="ruby">    if !current_worker</code>
         </li>
@@ -607,11 +607,11 @@
         <div class="source_table" id="72c12bb35b057a3954e482a5b6cfea235943ce0b">
   <div class="header">
     <h3>app/controllers/jobs_controller.rb</h3>
-    <h4><span class="red">65.52 %</span> covered</h4>
+    <h4><span class="yellow">82.76 %</span> covered</h4>
     <div>
       <b>29</b> relevant lines. 
-      <span class="green"><b>19</b> lines covered</span> and
-      <span class="red"><b>10</b> lines missed.</span>
+      <span class="green"><b>24</b> lines covered</span> and
+      <span class="red"><b>5</b> lines missed.</span>
     </div>
   </div>
   
@@ -648,8 +648,8 @@
           <code class="ruby">  def index</code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="6">
-          <span class="hits">1</span>
+        <li class="covered" data-hits="2" data-linenumber="6">
+          <span class="hits">2</span>
           
           <code class="ruby">    @jobs = Job.all</code>
         </li>
@@ -672,14 +672,14 @@
           <code class="ruby">  def new</code>
         </li>
       
-        <li class="missed" data-hits="0" data-linenumber="10">
-          
+        <li class="covered" data-hits="1" data-linenumber="10">
+          <span class="hits">1</span>
           
           <code class="ruby">   @job = Job.new</code>
         </li>
       
-        <li class="missed" data-hits="0" data-linenumber="11">
-          
+        <li class="covered" data-hits="1" data-linenumber="11">
+          <span class="hits">1</span>
           
           <code class="ruby">   render :new</code>
         </li>
@@ -726,20 +726,20 @@
           <code class="ruby">  def create</code>
         </li>
       
-        <li class="missed" data-hits="0" data-linenumber="19">
-          
+        <li class="covered" data-hits="1" data-linenumber="19">
+          <span class="hits">1</span>
           
           <code class="ruby">    @job = Job.new(job_params)</code>
         </li>
       
-        <li class="missed" data-hits="0" data-linenumber="20">
-          
+        <li class="covered" data-hits="1" data-linenumber="20">
+          <span class="hits">1</span>
           
           <code class="ruby">    if @job.save</code>
         </li>
       
-        <li class="missed" data-hits="0" data-linenumber="21">
-          
+        <li class="covered" data-hits="1" data-linenumber="21">
+          <span class="hits">1</span>
           
           <code class="ruby">      redirect_to jobs_path</code>
         </li>
@@ -912,8 +912,8 @@
           <code class="ruby">  def job_params</code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="50">
-          <span class="hits">1</span>
+        <li class="covered" data-hits="2" data-linenumber="50">
+          <span class="hits">2</span>
           
           <code class="ruby">    params.require(:job).permit(:title, :description, :in_work, :completed, :worker_id, :pending)</code>
         </li>
@@ -4515,8 +4515,8 @@
     <h3>spec/features/job_pages_spec.rb</h3>
     <h4><span class="green">100.0 %</span> covered</h4>
     <div>
-      <b>12</b> relevant lines. 
-      <span class="green"><b>12</b> lines covered</span> and
+      <b>20</b> relevant lines. 
+      <span class="green"><b>20</b> lines covered</span> and
       <span class="red"><b>0</b> lines missed.</span>
     </div>
   </div>
@@ -4614,7 +4614,61 @@
           <code class="ruby">  end</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="16">
+        <li class="covered" data-hits="1" data-linenumber="16">
+          <span class="hits">1</span>
+          
+          <code class="ruby">  it &quot;creates a job&quot;, js: true do</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="17">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    worker = FactoryGirl.create(:worker)</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="18">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    login_as(worker, scope: :worker)</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="19">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    visit new_job_path</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="20">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    fill_in &#39;job[title]&#39;, :with =&gt; &#39;Rebuild death star&#39;</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="21">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    fill_in &#39;job[description]&#39;, :with =&gt; &#39;Those dang space wizards!!!&#39;</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="22">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    click_on &#39;Create Job&#39;</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="23">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    expect(page).to have_content &#39;Rebuild death star&#39;</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="24">
+          
+          
+          <code class="ruby">  end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="25">
           
           
           <code class="ruby">end</code>
@@ -5316,14 +5370,14 @@
           <code class="ruby">  config.around(:each) do |example|</code>
         </li>
       
-        <li class="covered" data-hits="9" data-linenumber="43">
-          <span class="hits">9</span>
+        <li class="covered" data-hits="10" data-linenumber="43">
+          <span class="hits">10</span>
           
           <code class="ruby">    DatabaseCleaner.cleaning do</code>
         </li>
       
-        <li class="covered" data-hits="9" data-linenumber="44">
-          <span class="hits">9</span>
+        <li class="covered" data-hits="10" data-linenumber="44">
+          <span class="hits">10</span>
           
           <code class="ruby">      example.run</code>
         </li>

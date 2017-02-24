@@ -13,4 +13,13 @@ describe "workers pages" do
     click_link 'click here to claim it now'
     expect(page).to have_content 'View your jobs'
   end
+  it "creates a job", js: true do
+    worker = FactoryGirl.create(:worker)
+    login_as(worker, scope: :worker)
+    visit new_job_path
+    fill_in 'job[title]', :with => 'Rebuild death star'
+    fill_in 'job[description]', :with => 'Those dang space wizards!!!'
+    click_on 'Create Job'
+    expect(page).to have_content 'Rebuild death star'
+  end
 end
