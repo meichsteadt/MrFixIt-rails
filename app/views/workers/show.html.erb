@@ -3,38 +3,59 @@
 <div class="row">
   <div id="col1" class="col-md-4">
     <h3 class="text-center">Inactive</h3>
-    <ul>
-    <% current_worker.jobs.each do |job| %>
-      <% if !job.completed && !job.in_work %>
-        <li id="job<%= job.id %>">
-          <%= link_to job.title, job_path(job) %>
-          <%= link_to '>', job_path(job, :job => { in_work: true }, col: 1), :method => "patch", remote: true %>
-        </li>
+    <table class="table table-hover table-condensed" id="col1">
+      <tr>
+        <th>Job title</th>
+      </tr>
+      <% current_worker.jobs.each do |job| %>
+        <% if !job.completed && !job.in_work %>
+          <tr id="job<%= job.id %>">
+            <td>
+              <%= link_to job.title, job_path(job) %>
+              <%= link_to job_path(job, :job => { in_work: true }, col: 1), :method => "patch", remote: true do %>
+              <%= check_box_tag 'job' %>
+              <% end %>
+            </td>
+          </tr>
+        <% end %>
       <% end %>
-    <% end %>
-    </ul>
+    </table>
   </div>
   <div class="col-md-4">
     <h3 class="text-center">In work</h3>
-    <ul id="col2">
-    <% current_worker.jobs.each do |job| %>
-      <% if job.in_work %>
-        <li id="job<%= job.id %>">
-          <%= link_to job.title, job_path(job) %>
-          <%= link_to ">", job_path(job, :job => { completed: true, in_work: false }, col: 2), :method => "patch", remote: true %>
-        </li>
+    <table class="table table-hover table-condensed" id="col2">
+      <tr>
+        <th>Job title</th>
+      </tr>
+      <% current_worker.jobs.each do |job| %>
+        <% if job.in_work %>
+          <tr id="job<%= job.id %>">
+            <td>
+              <%= link_to job.title, job_path(job) %>
+              <%= link_to job_path(job, :job => { completed: true, in_work: false }, col: 2), :method => "patch", remote: true do %>
+                <%= check_box_tag 'job' %>
+              <% end %>
+            </td>
+          </tr>
+        <% end %>
       <% end %>
-    <% end %>
-    </ul>
+    </table>
   </div>
   <div class="col-md-4">
     <h3 class="text-center">Completed</h3>
-    <ul id="col3">
-    <% current_worker.jobs.each do |job| %>
-      <% if job.completed && !job.in_work %>
-        <li><%= link_to job.title, job_path(job) %></li>
+    <table class="table table-hover table-condensed" id="col3">
+      <tr>
+        <th>Job title</th>
+      </tr>
+      <% current_worker.jobs.each do |job| %>
+        <% if !job.in_work && job.completed %>
+          <tr id="job<%= job.id %>">
+            <td>
+              <%= link_to job.title, job_path(job) %>
+            </td>
+          </tr>
+        <% end %>
       <% end %>
-    <% end %>
-    </ul>
+    </table>
   </div>
 </div>
