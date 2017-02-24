@@ -7,12 +7,12 @@
       <tr>
         <th>Job title</th>
       </tr>
-      <% current_worker.jobs.each do |job| %>
+      <% current_worker.jobs.sort_by{|a| a.title}.each do |job| %>
         <% if !job.completed && !job.in_work %>
           <tr id="job<%= job.id %>">
             <td>
               <%= link_to job.title, job_path(job) %>
-              <%= link_to job_path(job, :job => { in_work: true }, col: 1), :method => "patch", remote: true do %>
+              <%= link_to job_path(job, :job => { in_work: true, pending: false }, col: 1), :method => "patch", remote: true do %>
               <%= check_box_tag 'job' %>
               <% end %>
             </td>
@@ -27,7 +27,7 @@
       <tr>
         <th>Job title</th>
       </tr>
-      <% current_worker.jobs.each do |job| %>
+      <% current_worker.jobs.sort_by{|a| a.title}.each do |job| %>
         <% if job.in_work %>
           <tr id="job<%= job.id %>">
             <td>
@@ -47,7 +47,7 @@
       <tr>
         <th>Job title</th>
       </tr>
-      <% current_worker.jobs.each do |job| %>
+      <% current_worker.jobs.sort_by{|a| a.title}.each do |job| %>
         <% if !job.in_work && job.completed %>
           <tr id="job<%= job.id %>">
             <td>

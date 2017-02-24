@@ -1,7 +1,24 @@
 <h1>Jobs</h1>
 
-<ul>
-  <% @jobs.each do |job| %>
-  <li><%= link_to job.title, job_path(job) %></li>
+<table class="table table-striped">
+  <tr>
+    <th>Job Title</th>
+    <th>Job Status</th>
+  </tr>
+  <% @jobs.sort_by{|a| a.title}.each do |job| %>
+  <tr class="job">
+    <td><%= link_to job.title, job_path(job) %></td>
+    <td>
+      <% if job.pending && !job.in_work %>
+        Pending
+      <% elsif job.in_work %>
+        In work
+      <% elsif job.completed %>
+        Completed
+      <% else %>
+        Open
+      <% end %>
+      </td>
+  </tr>
   <% end %>
-</ul>
+</table>
