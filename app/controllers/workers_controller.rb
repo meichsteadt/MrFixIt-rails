@@ -1,5 +1,6 @@
 class WorkersController < ApplicationController
   before_action :authenticate_worker
+  skip_before_action :authenticate_worker, only: [:new]
   def show
     @worker = current_worker
     render :show

@@ -9,11 +9,17 @@ describe "workers pages" do
   end
 
   it "will sign you up as a worker" do
-    visit new_worker_registration_path
+    visit new_worker_path
     fill_in 'worker[email]', :with => 'email@worker.com'
     fill_in 'worker[password]', :with => 'password'
     fill_in 'worker[password_confirmation]', :with => 'password'
     click_on 'Sign up'
     expect(page).to have_content 'Worker Dashboard'
+  end
+  it "will redirect you if you are already a worker" do
+    worker = FactoryGirl.create(:worker)
+    login_as(worker, scope: :worker)
+    visit new_worker_path
+    expect(page).to have_content "You're already logged"
   end
 end
