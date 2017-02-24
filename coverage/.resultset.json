@@ -71,8 +71,8 @@
         null,
         null,
         1,
-        10,
-        10,
+        11,
+        11,
         null,
         null,
         null,
@@ -617,9 +617,9 @@
         null,
         1,
         1,
-        5,
-        0,
-        0,
+        6,
+        1,
+        1,
         null,
         null,
         null
@@ -778,6 +778,10 @@
         1,
         1,
         null,
+        1,
+        1,
+        1,
+        null,
         null
       ],
       "/Users/gassinbreh/GitHub/rails/MrFixIt-rails/spec/features/worker_pages_spec.rb": [
@@ -822,6 +826,6 @@
         null
       ]
     },
-    "timestamp": 1487980325
+    "timestamp": 1487980445
   }
 }
