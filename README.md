@@ -17,12 +17,6 @@ _Mr. Fix-It is the one-stop-shop to crowd-source all your home repair needs. Nee
 - `$ rails s` to start the rails server
 - Navigate to `localhost:3000` in your browser
 
-## Development Roadmap
-
-_Mr. Fix-It is still a work in progress. Here's what we've done so far, and what we'd still like to add:_
-
-### Completed
-
 _The following functionality is present in our application:_
 
 * Users can register for basic user accounts. These accounts allow them to post jobs.
