@@ -32,14 +32,7 @@ class JobsController < ApplicationController
           format.html { redirect_to jobs_path() }
           format.js
         end
-      else
-        render :show
-        flash[:notice] = "Something went wrong!"
       end
-    else
-      # We need to streamline this process better in the future! - Mr. Fix-It.
-      flash[:notice] = 'You must have a worker account to claim a job. Register for one using the link in the navbar above.'
-      redirect_to new_user_registration_path
     end
   end
 

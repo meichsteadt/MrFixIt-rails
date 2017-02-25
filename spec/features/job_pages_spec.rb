@@ -17,6 +17,7 @@ describe "workers pages" do
     worker = FactoryGirl.create(:worker)
     login_as(worker, scope: :worker)
     visit new_job_path
+    click_on 'Create Job'
     fill_in 'job[title]', :with => 'Rebuild death star'
     fill_in 'job[description]', :with => 'Those dang space wizards!!!'
     click_on 'Create Job'
