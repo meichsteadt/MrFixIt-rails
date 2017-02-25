@@ -1,4 +1,5 @@
 # Mr. Fix-It
+###_Matt Eichsteadt_
 
 ## About Us
 
@@ -29,16 +30,9 @@ _The following functionality is present in our application:_
 * Basic users may post their jobs to the jobs list.
 * Basic users have the option to sign up for a Worker account, which allows them to claim and complete jobs.
 * A worker can claim a job, and see it in their "Worker Dashboard"
-
-### Still Needed
-
-_The following must still be implemented:_
-
-* Workers must be able to claim a job **via an AJAX action**.
-* A worker must be able to mark which jobs they're actively working on **using AJAX**.
-* Workers must be able to mark jobs "complete" **using AJAX**.
-* Site needs to look more presentable and polished.
-* Unit and integration testing needs to be implemented throughout.
+* Workers can claim a job **via an AJAX action**.
+* A worker can mark which jobs they're actively working on **using AJAX**.
+* Workers can mark jobs "complete" **using AJAX**.
 
 ## License
 
